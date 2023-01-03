@@ -1,0 +1,147 @@
+/* BallCourtPackage/addBallCourt/addBallCourt.wxss */
+/* 输入框颜色 */
+.select-color {
+  color: #ff8000;
+}
+
+.selected-color {
+  color: #0080ff;
+}
+
+/* 选择地址 */
+.chooseLocation {
+  margin: 20rpx 20rpx;
+  background-color: #FFF;
+}
+
+.chooseLocation image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.chooseLocation input {
+  width: 80%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 10rpx;
+  float: left;
+}
+
+/* 提交按钮 */
+.flex {
+  display: flex;
+}
+
+.flex-direction {
+  flex-direction: column;
+}
+
+.submitbtn {
+  width: 100%;
+  color: #fff;
+  margin: 20px 0;
+}
+
+/* 已经提交 */
+
+.list_box {
+  margin-top: 115rpx;
+}
+
+.list_item {
+  height: auto;
+  margin: 20rpx 20rpx;
+  border-radius: 15rpx;
+  padding: 25rpx;
+  background-color: #ffffff;
+}
+
+.title {
+  font-size: 15px;
+}
+
+.desc {
+  margin-top: 20rpx;
+  font-size: 12px;
+  color: grey;
+}
+
+.text-red {
+  color: #e26843;
+}
+
+.text-blue {
+  color: #0081ff;
+}
+
+.uploadImgBox {
+  margin: 30rpx 0;
+}
+
+.logoinfo {
+  height: 180rpx;
+  width: 180rpx;
+  margin: 10rpx;
+}
+
+.smallImgBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 180rpx);
+  grid-gap: 20rpx 10rpx;
+}
+
+.moreImg {
+  border-radius: 10rpx;
+  height: 180rpx;
+  width: 180rpx;
+  margin: 20rpx;
+}
+
+.button {
+  height: 90rpx;
+  width: 270rpx;
+  font-size: 38rpx;
+  background-color: rgba(146, 163, 45, 0.288);
+  font-weight: 600;
+  color: white;
+}
+
+button::after {
+  border: none;
+}
+
+.img{
+  margin-left: 5%;
+  width: 90%;
+  display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+.img2{
+   width: 210rpx;
+   height: 210rpx;
+}
+.img2 view{
+  color: red;
+  z-index: 5;
+  position: relative; 
+  width: 20rpx;
+  height: 20rpx;
+  margin-top:0rpx;
+  margin-left: 90%;
+}
+.img2 image{
+  width: 190rpx;
+  height: 190rpx;
+  position: relative;
+  z-index: 5;
+}
+.des {
+  padding-left: 40rpx;
+  padding-top: 20rpx;
+  font-size: 26rpx;
+  color: #acacac;
+  letter-spacing: 2rpx;
+  line-height: 42rpx;
+}

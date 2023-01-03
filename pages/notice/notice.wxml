@@ -1,0 +1,19 @@
+<!--pages/notice/notice.wxml-->
+<!-- 公告 -->
+<view class="noticeTop_box">
+  <van-notice-bar class="noticeBar" left-icon="volume-o" color="#181818;" backgroundColor="#fff" text="{{noticeTop}}" />
+</view>
+
+<!-- 消息框 -->
+<view class="notice_box" wx:if="{{!nothing}}">
+  <!-- 图片 -->
+  <view class="img">
+    <image src="{{headerImg}}" mode="widthFix" />
+  </view>
+  <!-- 消息 -->
+  <view class="notice">{{notice}}</view>
+</view>
+<!-- 没有消息 -->
+<view wx:else class="notice_no">
+  <text>暂时没有新消息</text>
+</view>

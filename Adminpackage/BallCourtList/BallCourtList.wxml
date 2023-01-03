@@ -1,0 +1,32 @@
+<!--Adminpackage/BallCourtList/BallCourtList.wxml-->
+<view class="top_nav_box">
+  <view class="top_nav_item" data-type="unpublished" bindtap="ChangeTab">
+    <text class="{{isShowColor?'':'top_nav_color'}}">待审核<text class="text-red">{{unPutotal?unPutotal:''}}</text></text>
+  </view>
+  <view class="top_nav_item" data-type="published" bindtap="ChangeTab">
+    <text class="{{isShowColor?'top_nav_color':''}}">已审核<text class="text-red">{{Putotal?Putotal:''}}</text></text>
+  </view>
+</view>
+<view class="list_box">
+  <view class="list_item" wx:if="{{unpublished}}" wx:for="{{unPublishList}}" wx:key='index' data-type="unpublished"
+    data-id="{{item['_id']}}" bindtap="Navigate">
+    <view class="desc">篮球场简介：{{item.addressInfo?item.addressInfo:item.addressName}}</view>
+    <view class="desc">申请时间：<text class="text-red">{{item.creatTime}}</text></view>
+    <view class="desc">审核状态：<text class="text-red">待审核</text></view>
+    <view class="desc text-blue">说明：点击卡片查看详情并进行审核</view>
+    <view class="desc" wx:if='{{unPublishList.length==0}}'>暂时没有待审核的内容</view>
+  </view>
+
+
+  <view class="list_item" wx:if="{{published}}" wx:for="{{publishList}}" wx:key='index' data-type="published"
+    data-id="{{item['_id']}}" bindtap="Navigate">
+    
+    <view class="desc">篮球场简介：{{item.addressInfo?item.addressInfo:item.addressName}}</view>
+    <view class="desc">申请时间：<text class="text-red">{{item.creatTime}}</text></view>
+    <view class="desc">审核状态：<text class="text-blue">已于{{item.auditTime?item.auditTime:''}}审核通过</text></view>
+    <view class="desc text-red">说明：点击卡片即可查看已审核详情；</view>
+    <view class="desc" wx:if='{{publishList.length==0}}'>暂时没有已发布的内容</view>
+  </view>
+  
+</view>
+

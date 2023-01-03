@@ -1,0 +1,257 @@
+/**app.wxss**/
+page{
+  background-color: #f0f0f0;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/* 自定义表单样式 */
+
+/* ==================
+         表单
+ ==================== */
+
+ .cu-form-group {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  min-height: 100rpx;
+  justify-content: space-between;
+}
+
+.cu-form-group+.cu-form-group {
+  border-top: 1rpx solid #eee;
+}
+
+.cu-form-group .title {
+  text-align: justify;
+  padding-right: 30rpx;
+  font-size: 30rpx;
+  position: relative;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.cu-form-group.top {
+  align-items: baseline;
+}
+
+.cu-form-group input {
+  flex: 1;
+  font-size: 30rpx;
+  color: #555;
+  padding-right: 20rpx;
+}
+
+.cu-form-group>text[class*="icon"] {
+  font-size: 36rpx;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cu-form-group textarea, .cu-form-group textarea textarea {
+  margin: 32rpx 0 30rpx;
+  height: 4.8em;
+  width: 100%;
+  line-height: 1.2em;
+  flex: 1;
+  font-size: 28rpx;
+  padding: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.cu-form-group textarea::after {
+  content: "测试文字";
+  opacity: 0;
+}
+
+.cu-form-group .grid-square {
+  margin: 20rpx 0 0;
+}
+
+.cu-form-group picker {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.cu-form-group picker .picker {
+  line-height: 100rpx;
+  font-size: 28rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-align: right;
+}
+
+.cu-form-group picker::after {
+  font-family: iconfont;
+  display: block;
+  position: absolute;
+  font-size: 34rpx;
+  color: #aaa;
+  line-height: 100rpx;
+  width: 60rpx;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  right: -10rpx;
+  margin: auto;
+}
+
+.cu-form-group textarea[disabled],
+.cu-form-group textarea[disabled] .placeholder {
+  color: transparent;
+}
+
+/* grid布局 */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid.grid-square {
+  overflow: hidden;
+}
+
+.grid.grid-square .cu-tag {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-bottom-left-radius: 6rpx;
+  height: auto;
+}
+
+.grid.grid-square>view>text[class*="icon_"] {
+  font-size: 50px;
+  position: absolute;
+  color: var(--grey);
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid.grid-square>view {
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 6rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid.grid-square>view.bg-img image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.grid.col-1.grid-square>view {
+  padding-bottom: 100%;
+  height: 0;
+  margin-right: 0;
+}
+
+.grid.col-2.grid-square>view {
+  padding-bottom: calc((100% - 20rpx)/2);
+  height: 0;
+  width: calc((100% - 20rpx)/2);
+}
+
+.grid.col-3.grid-square>view {
+  padding-bottom: calc((100% - 40rpx)/3);
+  height: 0;
+  width: calc((100% - 40rpx)/3);
+}
+
+.grid.col-4.grid-square>view {
+  padding-bottom: calc((100% - 60rpx)/4);
+  height: 0;
+  width: calc((100% - 60rpx)/4);
+}
+
+.grid.col-5.grid-square>view {
+  padding-bottom: calc((100% - 80rpx)/5);
+  height: 0;
+  width: calc((100% - 80rpx)/5);
+}
+
+.grid.col-2.grid-square>view:nth-child(2n),
+.grid.col-3.grid-square>view:nth-child(3n),
+.grid.col-4.grid-square>view:nth-child(4n),
+.grid.col-5.grid-square>view:nth-child(5n) {
+  margin-right: 0;
+}
+
+.grid.col-1>view {
+  width: 100%;
+}
+
+.grid.col-2>view {
+  width: 50%;
+}
+
+.grid.col-3>view {
+  width: 33.33%;
+}
+
+.grid.col-4>view {
+  width: 25%;
+}
+
+.grid.col-5>view {
+  width: 20%;
+}
+
+.flex-sub {
+  flex: 1;
+}
+
+.bg-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+@font-face {
+  font-family: "iconfont"; /* Project id 2815905 */
+  src: url('//at.alicdn.com/t/font_2815905_7xmaebzmi5r.woff2?t=1633942405224') format('woff2'),
+       url('//at.alicdn.com/t/font_2815905_7xmaebzmi5r.woff?t=1633942405224') format('woff'),
+       url('//at.alicdn.com/t/font_2815905_7xmaebzmi5r.ttf?t=1633942405224') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_x_img:before {
+  content: "\e8e8";
+}
+
+.icon_add_img:before {
+  content: "\e785";
+}
+
+

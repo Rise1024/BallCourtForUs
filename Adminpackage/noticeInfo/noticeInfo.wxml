@@ -1,0 +1,23 @@
+<!--Adminpackage/noticeInfo/noticeInfo.wxml-->
+
+<view class="list_box">
+  <view class="desc">上次编辑：{{NoticeData.editer}}</view>
+  <view class="desc">上次更新：{{NoticeData.updateTime}}</view>
+
+  <!-- 信息页面-顶部 -->
+  <view class="title">消息页面-顶部:(共 {{NoticeData.noticeTop.length?NoticeData.noticeTop.length:0}}/100 字)</view>
+  <view class="desc" style="color:#42A5F5;margin-top:10px;">该文案将用在消息通知页面的顶部滚动公告栏进行展示,不超过100字。</view>
+  <view style="margin-top:15px;">
+    <textarea placeholder="消息通知-顶部" value='目前页面顶部通知未开发暂定' data-key="noticeTop" maxlength='100' auto-height='true' disabled='true' bindinput="InputData" />
+  </view>
+
+    <!-- 信息页面 -->
+    <view class="title">消息页面-通知:(共 {{NoticeData.notice.length?NoticeData.notice.length:0}}/100 字)</view>
+  <view class="desc" style="color:#42A5F5;margin-top:10px;">该文案将用在消息通知页面的进行展示,不超过100字。</view>
+  <view style="margin-top:15px;">
+    <textarea placeholder="消息通知" value='{{NoticeData.notice}}' data-key="notice" maxlength='100' auto-height='true'
+      bindinput="InputData" />
+  </view>
+</view>
+
+<view class="btn bg-green" bindtap="submitData">更新数据</view>

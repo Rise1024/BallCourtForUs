@@ -1,0 +1,65 @@
+/* Adminpackage/BallCourtAudit/BallCourtAudit.wxss */
+.list-box{
+  margin: 15rpx 30rpx;
+  border-radius: 15rpx;
+  padding: 25rpx;
+  background-color: #ffffff;
+}
+
+.title{
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.tips{
+  font-size: 12px;
+  color:rgb(33, 207, 111);
+}
+
+.desc{
+  margin-top: 15rpx;
+  font-size: 16px;
+  color:grey;
+}
+
+.text-red{
+  color: #e26843;
+}
+
+.text-blue{
+  color: #0081ff;
+}
+
+.padding {
+  padding: 10rpx;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-direction {
+  flex-direction: column;
+}
+
+.submitbtn {
+  width: 100%;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.img{
+width:100%;
+}
+
+.padding-xs {
+padding: 10rpx;
+}
+
+/*轮播图 */
+
+.swiper_box image {
+  width: 100%;
+  height: 100%;
+}

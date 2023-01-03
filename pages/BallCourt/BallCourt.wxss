@@ -1,0 +1,38 @@
+/* pages/BallCourt/BallCourt.wxss */
+/* 公告 */
+.noticeBar_box{
+  z-index: 1;
+}
+
+/* 地图 */
+.map{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.map map{
+	width: 100%;
+	height: 100vh;
+}
+
+/* 右边固定工具栏 */
+.tips_box{
+  height: auto;
+  position: fixed;
+  right:20rpx;
+  bottom: 20%;
+  z-index: 1;
+}
+.tips_item{
+  margin: 20rpx 20rpx;
+  padding: 20rpx 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.tips_item image{
+  width: 100%;
+  height: 100%;
+  
+}

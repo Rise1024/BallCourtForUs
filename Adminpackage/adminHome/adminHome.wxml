@@ -1,0 +1,20 @@
+<!--Adminpackage/adminHome/adminHome.wxml--> 
+<view class="select-box"> 
+    <!-- 篮球场管理 --> 
+    <view data-url="../BallCourtList/BallCourtList"  bindtap="Navigate">
+        <image src="../images/ballCourt.png"></image>
+    </view>
+ 
+     <!-- 公告信息 --> 
+     <view data-url="../noticeInfo/noticeInfo" bindtap="Navigate"> 
+        <image src="../images/notice.png"></image> 
+    </view> 
+</view> 
+ 
+<view class="select-box" wx:if='{{superAdmin}}'> 
+    <!-- 管理员设置 --> 
+    <view data-url="../Admin/Admin" bindtap="Navigate"> 
+        <image src="../images/admin.png"></image> 
+    </view> 
+</view> 
+<view class="bottom_nav_box">后台管理系统</view>

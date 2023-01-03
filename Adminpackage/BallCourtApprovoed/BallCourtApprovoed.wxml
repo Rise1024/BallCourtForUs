@@ -1,0 +1,38 @@
+<!--Adminpackage/BallCourtApprovoed/BallCourtApprovoed.wxml-->
+<view class="list-box">
+	<view class="desc">提示：以下是已审核的定点篮球场详情。</view>
+</view>
+
+<!-- 轮播图 -->
+<view class="swiper_box">
+    <swiper autoplay="true" circular="true" interval="{{interval}}">
+      <block wx:for="{{BannerImg}}" wx:key="key">
+        <swiper-item bindtap="previewImage" data-url="{{item}}">
+          <image mode="aspectFit" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+ </view>
+
+	<view class="list-box" wx:for="{{DetialList}}" wx:key='key'>
+    <view class="title">篮球场信息</view> 
+		<view class="desc">篮球场简介：<text class="text-blue">{{item.addressInfo}}</text></view>
+		<view class="desc">篮球场地址：<text class="text-blue">{{item.addressName}}</text></view>
+		<view class="desc">详细地址：<text class="text-blue">{{item.address}}{{item.addressName}}</text></view>
+		<view class="desc">上传时间：<text class="text-blue">{{item.creatTime}}</text></view>
+		<view class="desc">上传者昵称：<text class="text-blue">{{item.creatorName}}</text></view>
+	</view>
+
+<view class="list-box">
+  <view class="title">审核信息：</view>
+  <view class="desc">审核人：{{DetialList[0].auditorName}}</view>
+	<view class="desc">审核状态：<text class="text-red">已审核</text></view>
+  <view class="desc">审核时间：{{DetialList[0].auditTime}}</view>
+</view>
+
+<!-- 按钮 -->
+<view class="padding flex flex-direction">
+	<button class='submitbtn' style="background:#ff0000;" bindtap="deleteshowModal">删除篮球场</button>
+</view>
+
+

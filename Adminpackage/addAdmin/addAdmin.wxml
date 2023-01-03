@@ -1,0 +1,13 @@
+<!--Adminpackage/addAdmin/addAdmin.wxml-->
+<!-- 管理员列表 -->
+<view class="card"  wx:for='{{UserList}}' wx:key="index">
+	<view class="icon">
+		<image src="{{item.avatarUrl}}"></image>
+	</view>
+	<view class="info-box">
+		<view class="info">{{index+1}}、昵称：{{item.nickName}}</view>
+		<view class="note">注册时间：{{item.registerTime}}</view>
+		<view class="note text-red">说明：请谨慎添加！</view>
+		<view>管理员：<switch data-id="{{item._id}}" checked="{{switch}}" bindchange="addAdmin"/></view>
+	</view>
+</view>

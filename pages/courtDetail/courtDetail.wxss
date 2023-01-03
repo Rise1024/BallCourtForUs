@@ -1,0 +1,90 @@
+/* pages/courtDetail/courtDetail.wxss */
+
+/* 轮播图 */
+.swiper_box{
+  width: 100%;
+  height: 400rpx;
+  margin-top: 30rpx;
+}
+.swiper_box image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 篮球场信息 */
+.list_box {
+  margin-top: 20rpx;
+}
+
+.list_item {
+  margin: 5rpx 10rpx;
+  border-radius: 15rpx;
+  padding: 25rpx;
+  background-color: #ffffff;
+}
+
+.title text{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 18px;
+}
+.title image{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0rpx 10rpx;
+}
+
+.desc {
+  margin-top: 20rpx;
+  font-size: 16px;
+  color: grey;
+}
+
+.text-color {
+  color: orange;
+}
+
+/* 底部导航栏 */
+
+.footer_nav {
+  width: 100%;
+  height: 120rpx;
+  position: fixed;
+  left: 0;
+  bottom: 7px;
+  border-top: 1rpx solid #f0f0f0;
+  background-color: #fff;
+}
+
+.footer_left {
+  width: 100%;
+  height: 120rpx;
+  padding-left: 130px;
+  padding-top: 3px;
+  display: inline-block;
+}
+
+.footer_item {
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 50rpx;
+  display: inline-block;
+  text-align: center;
+}
+
+.footer_item image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.footer_right {
+  width: 50%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  float: right;
+  background-color: #ea9518;
+}

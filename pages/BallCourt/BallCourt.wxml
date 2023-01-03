@@ -1,0 +1,21 @@
+<!--pages/BallCourt/BallCourt.wxml-->
+<view class="map">
+  <!-- 公告 -->
+  <!-- <view class="noticeBar_box">
+    <van-notice-bar class="noticeBar" left-icon="volume-o" color="#181818;" backgroundColor="#ffffff"text="{{notice}}" />
+  </view> -->
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" show-location="true" markers="{{markers}}"
+    data-id="{{markers[0].id}}" bindmarkertap="markertap">
+  </map>
+  <view class="tips_box">
+    <view class="tips_item" bindtap="useTips">
+      <image src="../image/useTips.png"></image>
+    </view>
+    <view class="tips_item" bindtap="MyLocation">
+      <image src="../image/myLocation.png"></image>
+    </view>
+    <view class="tips_item" bindtap="muteKey">
+      <image src="../image/{{muteKey?'close_sound':'open_sound'}}.png"></image>
+    </view>
+  </view>
+</view>

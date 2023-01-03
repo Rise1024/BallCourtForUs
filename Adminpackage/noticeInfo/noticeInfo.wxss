@@ -1,0 +1,57 @@
+/* Adminpackage/noticeInfo/noticeInfo.wxss */
+/* 赞助 */
+.Sponsor{
+  margin: 20rpx 20rpx;
+  border-radius: 16rpx;
+  background-color: #fff;
+}
+.Sponsor view{
+  text-align: center;
+}
+
+/* 公告信息 */
+
+.list_box {
+  margin: 10rpx 30rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+
+.title {
+  margin-top:15px;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 24rpx;
+  color: grey;
+}
+
+.btn {
+  margin: 20rpx 40rpx;
+  padding: 16rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.bg-blue {
+  background-color: #42A5F5;
+}
+
+.bg-green {
+  background-color: #27d6cd;
+}
+
+textarea{
+  padding: 10rpx;
+  font-size: 28rpx;
+  border: 1rpx rgb(231, 228, 228) solid;
+}
+input{
+  padding: 10rpx;
+  font-size: 28rpx;
+  border: 1rpx rgb(231, 228, 228) solid;
+}

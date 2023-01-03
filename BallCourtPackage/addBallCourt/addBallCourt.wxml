@@ -1,0 +1,51 @@
+<!--BallCourtPackage/addBallCourt/addBallCourt.wxml-->
+
+<view class="des">添加篮球场图片</view>
+<view class="img">
+  <block wx:for="{{BannerImg}}" wx:key="index">
+    <view class="img2">
+       <view bindtap="delete" data-id="{{index}}">x</view>
+       <image bindtap="previewImage" data-url="{{item}}" src="{{item}}"></image>
+    </view> 
+   </block>
+   <image wx:if="{{BannerImg.length<3}}" bindtap="uploadToCloud" style="width: 100rpx;height: 100rpx;"  src="../image/add.png"></image>
+</view>
+
+<!-- 输入框 -->
+<view wx:if="{{!apply}}">
+  <view class="cu-form-group" wx:for='{{InputList}}' wx:key='input'>
+    <view class='title'>
+      <text decode="true">&nbsp;&nbsp;<text decode="true" style="color:#EE0A24;">*</text>{{item.title}}</text>
+    </view>
+    <input placeholder="{{item.placeholder}}" id="{{item.id}}" type="{{item.type}}" maxlength='{{item.maxlength}}'
+    auto-height="true" data-key="{{item.id}}" style='color: #0080ff;' bindinput="InputData"></input>
+  </view>
+
+
+  <!-- 选择地址 -->
+  <view class="chooseLocation">
+    <input placeholder="请选择地址" auto-height="true" value="{{BallCourtAddress.name}}" style='color: #0080ff;'></input>
+    <image src="../image/chooselocation.png" bindtap="chooseLocation"></image>
+  </view>
+
+  <!-- 警告 -->
+  <view style="margin-top: 5px; margin-left: 5px;"><text style="font-size: 13px; color: red;">警告：</text><text
+      style="font-size: 13px; color: gray;">请不要恶意上传哟，程序猿们也很忙的哟</text></view>
+
+  <!-- 提交按钮 -->
+  <view class="padding flex flex-direction" wx:if="{{show}}">
+    <button class='cu-btn lg submitbtn' form-type="SubmitEntrust" type="primary" bindtap="Submit">确认提交</button>
+  </view>
+</view>
+
+
+<!-- 已提交，待审核 -->
+<view wx:else class="list_box">
+  <view class="list_item">
+    <view class="desc">篮球场简介：{{AddressInfo}}</view>
+    <view class="desc">篮球场地址：{{AddressName}}</view>
+    <view class="desc">提交时间：<text class="text-red">{{CreatTime}}</text></view>
+    <view class="desc">审核状态：<text class="text-red">待审核</text></view>
+    <view class="desc text-blue">说明：信息已经提交，请耐心等待管理员审核</view>
+  </view>
+</view>

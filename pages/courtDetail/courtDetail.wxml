@@ -1,0 +1,34 @@
+<!--pages/courtDetail/courtDetail.wxml-->
+<!-- 轮播图 -->
+<view class="swiper_box">
+    <swiper autoplay="true" circular="true" interval="{{interval}}">
+      <block wx:for="{{BannerImg}}" wx:key="key">
+        <swiper-item bindtap="previewImage" data-url="{{item}}">
+          <image mode="aspectFit" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+ </view>
+
+  <!-- 篮球场信息 -->
+  <view class="list_box">
+    <view class="list_item">
+      <block wx:for="{{DetialList}}" wx:key='key'>
+        <view class="desc">篮球场简介：{{item.addressInfo}}</view>
+        <view class="desc">篮球场地址：{{item.address}}</view>
+        <view class="desc">详细地址：{{item.address}}{{item.addressName}}</view>
+        <view class="desc">上传时间：{{item.creatTime}} </view>
+        <view class="desc">上传者昵称：{{item.creatorName}} </view>
+      </block>
+    </view>
+  </view>
+
+<!-- /* 底部导航栏 */ -->
+<view class="footer_nav">
+  <view class="footer_left">
+    <view class="footer_item" bindtap="navRoad">
+      <image src="../image/navRoad.png"></image>
+      <view>导航</view>
+    </view>
+  </view>
+</view>

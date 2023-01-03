@@ -1,0 +1,10 @@
+<!--pages/about/about.wxml-->
+<view class="about_box">
+
+  <view class="about_item">
+    <view class="about_title" >关于篮球场小程序</view>
+    <view class="about_content"><text class="gray">服务内容：</text>之前我到一个地方想要打球总是找不到这附近的室外篮球场,从主流地图上也找不到,于是想着做一个小程序,由各地球友标注篮球场实现共享</view>
+    <view class="about_content"><text class="gray">服务观念：</text>Love and peace</view>
+  </view>
+</view>
+<official-account></official-account>

@@ -1,0 +1,33 @@
+/* Adminpackage/adminHome/adminHome.wxss */
+/* 功能栏 */
+.select-box {
+  margin-top: 60rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0rpx 0rpx;
+}
+
+.select-box view {
+  width: 220rpx;
+  height: 220rpx;
+  margin-top: 20rpx;
+  border-radius: 16rpx;
+  background-color: #fff;
+  box-shadow: 20rpx 20rpx 10rpx rgba(39, 48, 57, 0.05);
+}
+
+.select-box image {
+  width: 220rpx;
+  height: 220rpx;
+  justify-content: center;
+}
+
+.bottom_nav_box {
+width: 100%;
+display: flex;
+position: fixed;
+flex-direction: column;
+align-items: center;
+bottom: 0;
+}

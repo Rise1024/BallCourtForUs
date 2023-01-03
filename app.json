@@ -1,0 +1,84 @@
+{
+  "pages": [
+    "pages/me/me",
+    "pages/BallCourt/BallCourt",
+    "pages/courtDetail/courtDetail",
+    "pages/notice/notice",
+    "pages/about/about"
+  ],
+  "requiredPrivateInfos":[
+    "getLocation"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "篮球场地图",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#B0B0B0",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/BallCourt/BallCourt",
+        "text": "附近篮球场",
+        "iconPath": "pages/image/bask_select.png",
+        "selectedIconPath": "pages/image/bask_select.png"
+      },
+      {
+        "pagePath": "pages/notice/notice",
+        "text": "消息",
+        "iconPath": "pages/image/notice.png",
+        "selectedIconPath": "pages/image/notice_select.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "pages/image/me.png",
+        "selectedIconPath": "pages/image/me_select.png"
+      }
+    ]
+  },
+  "subpackages": [
+    {
+      "root": "BallCourtPackage",
+      "name": "BallCourtPackage",
+      "pages": [
+        "addBallCourt/addBallCourt"
+            ]
+    },
+    {
+      "root": "Adminpackage",
+      "name": "adminpacket",
+      "pages": [
+          "adminHome/adminHome",
+          "noticeInfo/noticeInfo",
+          "BallCourtList/BallCourtList",
+          "BallCourtAudit/BallCourtAudit",
+          "BallCourtApprovoed/BallCourtApprovoed",
+          "Admin/Admin",
+          "addAdmin/addAdmin"
+      ]
+  }
+  ],
+
+  "permission": {
+    "scope.userLocation": {
+      "desc": "使用地图功能需授权位置信息"
+    }
+  },
+  "requiredPrivateInfos":[
+    "getLocation",
+    "chooseLocation"
+  ],
+  "requiredBackgroundModes": [
+    "location",
+    "audio"
+  ],
+  
+  "lazyCodeLoading": "requiredComponents",
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
